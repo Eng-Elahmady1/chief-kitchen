@@ -327,6 +327,34 @@ header {
       grid-template-columns: repeat(2, 1fr);
       grid-auto-rows: 200px;
       gap: 20px;
+
+      .item{
+        overflow: hidden;
+        .info{
+          bottom: 0;
+          left: 0;
+          padding: $base-padding*5;
+          background: rgba(0, 0, 0, 0.6);
+          transform: translateY(100%);
+          transition: $main-transition;
+
+          p{
+            color: $white-color;
+            font-size: $base-font-size*3;
+            margin-bottom: $base-margin*4;
+          }
+          .price{
+            span{
+              color: $white-color;
+              font-size: $base-font-size*2.5;
+            }
+          }
+        }
+
+        &:hover .info{
+          transform: translateY(0);
+        }
+      }
     }
 
     .item img {
